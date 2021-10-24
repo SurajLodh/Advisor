@@ -9,6 +9,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('AdvisorCall.urls')),
+    # path('api/', include('AdvisorCall.API.urls')),
 
     #api auth
     url(r'^rest-auth/', include('rest_auth.urls')),
