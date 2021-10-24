@@ -19,7 +19,8 @@ class Base(models.Model):
 
 class Advisor(Base):
     name = models.CharField(max_length=200, blank=True, null=True)
-    image = models.ImageField(upload_to='image/', null=True)
+    image = models.ImageField(upload_to='image/', blank=True, null=True)
+    image_url = models.CharField(max_length=200, blank=True, null=True, verbose_name=_('Photo URL'))
 
     def __str__(self):
         return f"{self.name}"
